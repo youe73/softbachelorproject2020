@@ -48,6 +48,7 @@ else:
                 newlinks.append(site)  
                 f.write(str(site) + "\n")                  
                 count+=1 
+        time.sleep(1)
     print("Newest link extracted")
 
 crw.scrape_contentfromlink(newlinks,"jobindex.dk")

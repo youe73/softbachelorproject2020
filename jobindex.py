@@ -19,7 +19,7 @@ class Jobindex(Datascraper):
         category = list(dict.fromkeys(category))
         for a in category:
             newurl = url[:-1] + a.get('href')            
-            categorylist.append(newurl) 
+            categorylist.append(newurl)             
         #logger.debug(categorylist)
         return categorylist
 
@@ -32,7 +32,7 @@ class Jobindex(Datascraper):
             for a in subcategory:
                 newurl = url[:-1] + a.get('href')
                 subcategorylist.append(newurl)
-        #logger.debug(subcategorylist) 
+        #logger.debug(subcategorylist)             
         return subcategorylist
         
     def get_all_area(self,all_sublinks):    
@@ -44,7 +44,7 @@ class Jobindex(Datascraper):
             subarea = list(dict.fromkeys(subarea))
             for a in subarea:
                 print(a.get('href'))
-                arealist.append(a.get('href'))         
+                arealist.append(a.get('href'))                     
         #logger.debug(arealist)          
         return arealist
 
@@ -100,7 +100,7 @@ class Jobindex(Datascraper):
                         extracted = jobsite, name, title, dates 
                         if extracted not in all_linkpage:
                             all_linkpage.append(extracted)     
-                            f.write(str(extracted)+"\n")                       
+                            f.write(str(extracted)+"\n")                                   
         #logger.error(all_linkpage) 
         #f.close()
         return all_linkpage  
